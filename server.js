@@ -31,7 +31,8 @@ app.get('/weather', (req, res) => {
         location: weather_info.loc,
         summary: weather_info.Summary,
         temperature: weather_info.Temperature,
-        timezone: weather_info.Timezone
+        timezone: weather_info.Timezone,
+        icon: weather_info.icon
     });
 });
 
@@ -43,7 +44,8 @@ app.post('/getWeather', urlencodedParser, (req, res) => {
             loc: `${req.body.weather_input}`,
             Summary: `${results.summary}`,
             Temperature: `${results.temp}${decodeURI('%C2%B0')}C`,
-            Timezone: `${results.timezone}`
+            Timezone: `${results.timezone}`,
+            icon: `${results.icon}`
         }
         res.redirect('/weather')
     }).catch((error) => {

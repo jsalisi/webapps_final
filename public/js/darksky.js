@@ -24,7 +24,8 @@ var getWeather = (latitude, longitude) => {
                 resolve({
                     summary: body.currently.summary,
                     temp: parseFloat((body.currently.temperature - 32) * (5 / 9)).toFixed(2),
-                    timezone: body.timezone
+                    timezone: body.timezone,
+                    icon: body.currently.icon
                 });
             };
         });
