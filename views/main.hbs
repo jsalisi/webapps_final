@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <title>Final Exam</title>
+    <link href="css/layout.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <h2>Weather Information</h2>
+
+    <form action="/getWeather" method="POST">
+        <label for="weather_input">
+            <b>Get weather information:</b>
+        </label>
+        <br>
+        <input type="text" name="weather_input" id="weather_inp" placeholder="Enter location">
+        <button type="submit">Get Weather!</button>
+    </form>
+
+    <form action="/getGallery" method="POST">
+        <label for="image_input">
+            <b>Get image gallery:</b>
+        </label>
+        <br>
+        <input type="text" name="image_input" id="image_inp" placeholder="Enter image to display">
+        <button type="submit">Get images!</button>
+    </form>
+
+    <img id="bg" src="imgs/Sketch.png" />
+
+</body>
+
+</html>
